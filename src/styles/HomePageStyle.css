@@ -1,19 +1,19 @@
 :root {
 
     --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
---gradeint-gray: rgba(255, 255, 255, 0.22);
+    --gradeint-gray: rgba(255, 255, 255, 0.22);
     /* dark mode */
-  --gradient-blue :  rgba(0, 0, 255, 0.373) ;
---gradient-black:  rgba(2, 0, 0, 0.617);
---text-white: white;
+    --gradient-blue: rgba(0, 0, 255, 0.373);
+    --gradient-black: rgba(2, 0, 0, 0.617);
+    --text-white: white;
 }
 
 .main-container {
     background-image: url(../assets/background.jpg);
     position: relative;
-
+background-size: cover;;
     width: 100%;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 
 }
 
@@ -23,8 +23,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: full;
-    background: linear-gradient(to top, var(--gradient-blue) ,var(--gradeint-gray) );
+    width: 100%;
+    background: linear-gradient(to top, var(--gradient-blue), var(--gradeint-gray));
     z-index: 3;
 }
 
@@ -43,11 +43,11 @@
 .right-content {
     display: block;
     margin-left: 100px;
-   
+
 }
 
 .dark .second-container {
-    background: linear-gradient(to top, var(--gradient-blue) , var(--gradient-black) );
+    background: linear-gradient(to top, var(--gradient-blue), var(--gradient-black));
 
 }
 
@@ -61,7 +61,7 @@
     top: 55%;
     animation-name: swiper;
     animation-duration: 3s;
-    
+
 }
 
 .first-title {
@@ -71,8 +71,9 @@
     margin-bottom: 20px;
 
 }
-.left-content{
-    animation-name:leftContent;
+
+.left-content {
+    animation-name: leftContent;
     animation-duration: 2s;
 }
 
@@ -85,19 +86,19 @@
     height: 50px;
     font-weight: 700;
     font-size: 25px;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
     background-color: var(--gradeint-gray);
     animation-name: button;
     animation-duration: 2s;
     animation-delay: 2s;
-    
+
 }
 
 
 .button:hover {
 
     transition: all;
-    box-shadow: var(--box-shadow) , var(--box-shadow), var(--box-shadow) ;
+    box-shadow: var(--box-shadow), var(--box-shadow), var(--box-shadow);
     font-size: 28px;
 
 
@@ -114,7 +115,7 @@
     25% {
         translate: 50px 0;
         rotate: 5deg;
-       
+
 
     }
 
@@ -128,7 +129,7 @@
 
 @keyframes button {
     0% {
-display: none;
+        display: none;
         translate: 0 0;
         appearance: 1;
         rotate: 0deg;
@@ -160,7 +161,7 @@ display: none;
         rotate: 5deg;
     }
 
-  
+
 
     100% {
         translate: 0 0;
@@ -178,7 +179,7 @@ display: none;
     .first-sectiont {
         justify-content: space-around;
         text-align: center;
-        top: 7rem ;
+        top: 7rem;
     }
 
     .first-title {
@@ -199,7 +200,7 @@ display: none;
     }
 }
 
-@media screen  and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .first-sectiont {
         flex-direction: column;
         /* ✅ جعل العناصر في عمود بدلاً من صف */

@@ -4,7 +4,8 @@ import '../../styles/HomePageStyle.css'
 import { Link } from 'react-router-dom'
 import SideImage from './SideImage'
 import SwiperCard from './SwiperCard'
-
+import GameList from '../GameList'
+import MainContent from '../MainContent'
 
 export const HomePage = () => {
   return (
@@ -32,16 +33,11 @@ export const HomePage = () => {
              <SwiperCard></SwiperCard>  
             </div>
             
-          
-
-          
-
         </div>
 
-       
-
-
       </div>
+
+    <MainContent></MainContent>
     </>
 
 

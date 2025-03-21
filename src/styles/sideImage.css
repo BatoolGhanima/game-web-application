@@ -1,0 +1,78 @@
+.containerimages {
+    display: flex;
+    position: relative;
+    width: 650px;
+    height: 350px;
+}
+
+.containerimages img {
+    z-index: 1;
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px white, 0 0 10px white;
+
+}
+
+#firstimg {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    z-index: 1;
+    animation-name: image;
+    animation-duration: 3s;
+}
+
+#secondimg {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    top: 2rem;
+    animation-name: image;
+    animation-duration: 3s;
+
+}
+
+#thirdimg {
+    position: absolute;
+    left: 100px;
+    z-index: 2;
+    top: 0.5rem;
+    margin: 5px;
+    animation-name: image;
+    animation-duration: 3s;
+
+
+}
+
+
+.containerimages img:hover {
+    z-index: 4;
+    transition: all;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 30px white;
+
+}
+
+@keyframes image {
+    0% {
+
+        translate: 150px -150px;
+        appearance: 1;
+        rotate: 0deg;
+    }
+
+    25% {
+        translate: 0 50px;
+        rotate: 5deg;
+
+
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+
+    }
+
+}

@@ -2,7 +2,7 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import store from '../state-managment/store'
-
+import '../styles/gameListStyle.css'
 
 import Loading from "./loading";
 const GameList = () => {
@@ -25,11 +25,15 @@ const GameList = () => {
         <>
              
                         
-                     <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                     <div className="game-container">
                 {isLoading && skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
-                {isLoading && <Loading></Loading>}
+                
                 {data?.map((game) => (
-                    <GameCard key={game.id} game={game} />
+                    
+                        <GameCard key={game.id} game={game} /> 
+                        
+                  
+                    
                 ))}
             </div>
                 

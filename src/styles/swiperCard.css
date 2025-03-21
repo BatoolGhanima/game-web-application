@@ -1,40 +1,43 @@
-
 :root {
 
     --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
---gradeint-gray: rgba(255, 255, 255, 0.22);
+    --gradeint-gray: rgba(255, 255, 255, 0.22);
     /* dark mode */
-  --gradient-blue :  rgba(0, 0, 255, 0.373) ;
---gradient-black:  rgba(2, 0, 0, 0.617);
---dark-blue:rgb(0, 16, 76);
---text-white: white;
+    --gradient-blue: rgba(0, 0, 255, 0.373);
+    --gradient-black: rgba(2, 0, 0, 0.617);
+    --dark-blue: rgb(0, 16, 76);
+    --text-white: white;
 }
 
 
-.container-card{
+.container-card {
     background-color: var(--text-white);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 350px;
 }
-.dark .container-card{
+
+.dark .container-card {
     background-color: var(--dark-blue);
 
 }
-.container-card img{
+
+.container-card img {
     border-radius: 15px;
     width: 100%;
     padding: 8px;
-    height: 350px; /* نفس h-60 */
+    height: 350px;
+    /* نفس h-60 */
     transition: all 0.3s ease;
 }
-.overlay-image{
+
+.overlay-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 97%;
     height: 335px;
-    background: linear-gradient(to top,  var(--dark-blue) 0%,  var(--gradeint-gray) 50%);
+    background: linear-gradient(to top, var(--dark-blue) 0%, var(--gradeint-gray) 50%);
     color: var(--text-white);
     display: flex;
     flex-direction: column;
@@ -43,7 +46,8 @@
     border-radius: 8px;
     margin: 8px;
 }
-.overlay-image h5{
+
+.overlay-image h5 {
     text-align: center;
     font-size: 1.5rem;
     position: absolute;
@@ -52,7 +56,8 @@
     text-shadow: 0 0 10px var(--dark-blue);
 
 }
-.overlay-image .platform-swiper{
+
+.overlay-image .platform-swiper {
     position: absolute;
     top: -10px;
     border-radius: 0 0 10px 10px;
@@ -60,15 +65,14 @@
     background-color: var(--text-white);
 }
 
-.dark .platform-swiper{
-    background-color:var(--dark-blue);
+.dark .platform-swiper {
+    background-color: var(--dark-blue);
 
 }
 
-@media screen  and (min-width:1200px){
-    .overlay-image{
+@media screen and (min-width:1200px) {
+    .overlay-image {
         width: 98%;
     }
-    
-}
 
+}

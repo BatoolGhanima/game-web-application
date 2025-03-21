@@ -1,0 +1,24 @@
+.main-content{
+    background-image: url(../assets/bg.jpg);
+    background-size: containt;
+    background-repeat: repeat;
+   
+}
+.dark .main-content{
+    background-image: url(../assets/bg.jpg); 
+}
+
+.ovelay-main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(209, 209, 209) , rgb(243, 206, 246));
+
+    width: 100%;
+    
+}
+.dark .ovelay-main-content{
+    background: linear-gradient(to left, #776FA4 ,#00104C);
+
+}

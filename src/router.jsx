@@ -6,6 +6,7 @@ import { Layout } from "./components/Layout";
 import SideBar from "./components/SideBar";
 import Sides from "./components/sides";
 import ErrorPage from "./components/ErrorPage";
+import GameDetails from "./components/GameDetails";
 const router = createBrowserRouter([
 
   {
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>
       
       },
+      {
+      path: '/game/:id',
+      element: <GameDetails/>,
+      errorElement: <ErrorPage></ErrorPage>
+    
+    },
       {
         path: '/sidebar',
         element: <Sides></Sides>,
