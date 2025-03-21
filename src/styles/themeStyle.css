@@ -1,0 +1,26 @@
+.theme{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px white;
+
+}
+
+.themeSun {
+    color: rgb(255, 255, 239);
+}
+.themeMoon{
+    color: rgb(0, 0, 103);
+}
+.themeSun:hover {
+    cursor:pointer;
+    color: wheat;
+    text-shadow: 0 0 10px white;
+   
+}
+.themeMoon:hover {
+    cursor:pointer;
+    color: wheat;
+    text-shadow: 0 0 10px white; 
+    transition: all;
+    transition: 0.5s;
+}

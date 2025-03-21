@@ -1,0 +1,232 @@
+:root {
+
+    --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
+--gradeint-gray: rgba(255, 255, 255, 0.22);
+    /* dark mode */
+  --gradient-blue :  rgba(0, 0, 255, 0.373) ;
+--gradient-black:  rgba(2, 0, 0, 0.617);
+--text-white: white;
+}
+
+.main-container {
+    background-image: url(../assets/background.jpg);
+    position: relative;
+
+    width: 100%;
+    background-repeat: repeat;
+
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: full;
+    background: linear-gradient(to top, var(--gradient-blue) ,var(--gradeint-gray) );
+    z-index: 3;
+}
+
+.first-sectiont {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.right-content {
+    display: block;
+    margin-left: 100px;
+   
+}
+
+.dark .second-container {
+    background: linear-gradient(to top, var(--gradient-blue) , var(--gradient-black) );
+
+}
+
+.swiper-container {
+    width: 100%;
+    margin-top: 50px;
+    /* ✅ مسافة بعد القسم الأول */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    animation-name: swiper;
+    animation-duration: 3s;
+    
+}
+
+.first-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--text-white);
+    margin-bottom: 20px;
+
+}
+.left-content{
+    animation-name:leftContent;
+    animation-duration: 2s;
+}
+
+.button {
+    box-shadow: var(--box-shadow);
+    border-radius: 25px;
+    z-index: 3;
+    color: var(--text-white);
+    width: 250px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 25px;
+    animation-iteration-count:infinite;
+    background-color: var(--gradeint-gray);
+    animation-name: button;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    
+}
+
+
+.button:hover {
+
+    transition: all;
+    box-shadow: var(--box-shadow) , var(--box-shadow), var(--box-shadow) ;
+    font-size: 28px;
+
+
+}
+
+@keyframes leftContent {
+    0% {
+
+        translate: -150px 150px;
+        appearance: 1;
+        rotate: 0deg;
+    }
+
+    25% {
+        translate: 50px 0;
+        rotate: 5deg;
+       
+
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+
+    }
+
+}
+
+@keyframes button {
+    0% {
+display: none;
+        translate: 0 0;
+        appearance: 1;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 3px 3px;
+        rotate: 2deg;
+        appearance: 0.5deg;
+        box-shadow: 0 0 5px cyan, 0 0 25px white, 0 0 50px white;
+
+
+
+    }
+
+    100% {
+        translate: 0 0;
+        appearance: 0;
+        rotate: 0deg;
+
+    }
+
+}
+
+@keyframes swiper {
+    0% {
+
+        translate: 0 400px;
+        rotate: 5deg;
+    }
+
+  
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 1199px) {
+    .first-sectiont {
+        justify-content: space-around;
+        text-align: center;
+        top: 7rem ;
+    }
+
+    .first-title {
+        font-size: 1.5rem;
+    }
+
+
+    .swiper-container {
+        height: 100px;
+        margin-top: 20px;
+        top: 60%;
+    }
+
+
+    .button {
+        width: 220px;
+        font-size: 22px;
+    }
+}
+
+@media screen  and (max-width: 768px) {
+    .first-sectiont {
+        flex-direction: column;
+        /* ✅ جعل العناصر في عمود بدلاً من صف */
+        text-align: center;
+        /* ✅ توسيط النص */
+        top: 9rem;
+        padding: 0 20px;
+    }
+
+    .first-title {
+        font-size: 1.5rem;
+        /* ✅ تصغير حجم العنوان */
+    }
+
+    .right-content {
+        display: none;
+    }
+
+    .swiper-container {
+        top: 50%;
+    }
+
+    .button {
+        width: 200px;
+        /* ✅ تقليل حجم الزر */
+        font-size: 20px;
+    }
+
+
+}
