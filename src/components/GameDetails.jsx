@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import apiClient from "../services/api-client";
 import '../styles/gameDetailsStyle.css'
 import DataError from "./DataError";
-import Loading from "./loading";
+import Loading from "./Loading";
 
 //this component created to show game details
 const GameDetails = () => {

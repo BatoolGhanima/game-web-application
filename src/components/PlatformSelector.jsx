@@ -1,7 +1,7 @@
 import { useState } from "react";
 import usePlatform from "../hooks/usePlatform";
 import usePlatformStore from '../state-managment/platformStore'; 
-import Loading from "./loading";
+import Loading from "./Loading";
 import DataError from "./DataError";
 
 const PlatformSelector = () => {

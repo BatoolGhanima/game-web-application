@@ -1,6 +1,6 @@
 import useGenres from "../hooks/useGenres";
 import useGenreStore from '../state-managment/genreStore'
-import Loading from "./loading";
+import Loading from "./Loading";
 import { useState } from 'react'
 import '../styles/genreListStyle.css'
 import DataError from "./DataError";
