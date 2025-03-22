@@ -1,9 +1,8 @@
+/* define gloabal variable for style */
 :root {
 
-    --box-shadow: 0 0 5px cyan, ;
-
+    --box-shadow: 0 0 5px cyan;
     --gradeint-gray: rgba(255, 255, 255, 0.32);
-    /* dark mode */
     --gradient-blue: rgba(0, 0, 255, 0.373);
     --gradient-black: rgba(2, 0, 0, 0.617);
     --text-white: white;
@@ -20,6 +19,7 @@
     padding: 2rem;
 }
 
+/* style of one card */
 .genre {
     width: 120px;
     height: 140px;
@@ -34,13 +34,24 @@
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* animation state */
+    animation-name: genre;
+    animation-duration: 2s;
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
+
+/* add hover to optomize style */
 .genre:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px var(--gradeint-gray);
 }
 
+
+/* image style in genre card */
 .genre img {
     width: 100px;
     height: 80px;
@@ -48,6 +59,7 @@
     margin-bottom: 10px;
 }
 
+/* taggle button for mini screens */
 .genre-switch{
     font-size: 30px;
     display: flex;
@@ -56,12 +68,13 @@
     gap: 10px;
 }
 
+/* mobile genre container */
 .mobile-genre{
     width: 400px;
     height: 700px;
     z-index: 15;
     position: absolute;
-    top: 90%;
+    top: 30%;
     left: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -70,12 +83,17 @@
     padding: 0.3rem;
     border-radius: 8px;
     transform: translateX(-50%);
+   
     
-    
-    background-color: var(--dark-blue);
+    background-color: var(--gradient-purple);
    
     
 }
+.dark .mobile-genre{
+    background-color: var(--gradient-black); 
+}
+
+/* mobile card sizes */
 .mobile-genre .genre{
     width: 80px;
     height: 100px;
@@ -90,4 +108,23 @@
     .genre-container {
       display: none;
     }
+}
+
+/* animation */
+@keyframes genre {
+    0% {
+
+        translate: 0px 200px;
+       opacity: 0;
+    }
+
+
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+        opacity: 1;
+
+    }
+
 }

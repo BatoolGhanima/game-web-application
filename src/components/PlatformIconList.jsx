@@ -17,14 +17,15 @@ const PlatformIconList = ({ platforms }) => {
     };
 
     return (
-        <>
-            <div className="flex space-x-2 my-2">
-                {platforms?.map((platform) => {
-                    const IconPlat = iconMap[platform.slug];
-                    return <IconPlat key={platform.id} className="text-gray-500 w-6 h-6" />;
-                })}
-            </div>
-        </>
+        <div className="flex space-x-2 my-2">
+            {platforms?.map((platform) => {
+                const IconPlat = iconMap[platform.slug];
+                // to make sure if icon exites
+                return IconPlat ? (
+                    <IconPlat key={platform.id} className="text-gray-500 w-6 h-6" />
+                ) : null; 
+            })}
+        </div>
     );
 };
 

@@ -1,0 +1,202 @@
+/* deifne gloabal variables */
+:root {
+
+    --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
+    --gradeint-gray: rgba(255, 255, 255, 0.22);
+    /* dark mode */
+    --gradient-blue: rgba(0, 0, 255, 0.373);
+    --gradient-black: rgba(2, 0, 0, 0.617);
+    --text-white: white;
+    --dark-blue: rgb(0, 16, 76);
+    --gradient-purple: rgba(136, 0, 136, 0.764);
+    --link-shadow: 0 0 10px white;
+
+
+
+}
+
+/* main container */
+.whole-page {
+    background-image: url(../assets/background.jpg);
+    position: relative;
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+    background-repeat: repeat;
+    
+
+}
+
+/* details container , middle of screen */
+.details-container {
+   
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    color: var(--gradient-black);
+    transform: translateX(-50%);
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: linear-gradient(to right, var(--gradeint-gray), var(--gradient-purple));
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    animation-name: game-details;
+    animation-duration: 3s;
+
+}
+
+.dark .details-container {
+    background: linear-gradient(to right, var(--dark-blue), var(--gradient-blue)70%);
+
+}
+.details-container p{
+    color: #dfbff7;
+}
+
+/* image and under tape */
+.left-details {
+    z-index: 3;
+    position: relative;
+    height: 100%;
+    width: 50%;
+
+}
+
+/* tape under the image */
+.under-tape {
+    position: absolute;
+    left: 30%;
+    width: 150px;
+    height: 100%;
+    background-color: #dfbff7;
+}
+.dark .under-tape{
+    background-color: var(--dark-blue);
+}
+
+
+/* iimage container */
+.details-image {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+
+
+}
+
+/* details image , rounded  */
+.details-image img {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: solid wheat;
+}
+
+/* for title and othe info */
+.right-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--gradient-black);
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding-right: 20px;
+}
+
+/* title */
+.right-details h1 {
+    text-shadow: var(--link-shadow);
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 3rem;
+
+}
+
+/* discraption */
+.right-details h2 span {
+    color: var(--gradient-black);
+    font-size: 1.2rem;
+
+}
+
+/* secondary title */
+.right-details h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    margin: 4px;
+}
+
+
+/* for diffrent screen sizea */
+@media screen and (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        width: 400px;
+        height: 800px;
+        padding: 0 10px;
+        font-size: 1rem;
+        top: 15%;
+    }
+
+    .left-details {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .under-tape {
+        display: none;
+    }
+
+    .right-details {
+        width: 100%;
+    }
+
+    .right-details h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .right-details h2 {
+        font-size: 1.2rem;
+    }
+    .whole-page{
+        height: 150vh;
+    }
+
+
+}
+
+
+/* animation  */
+@keyframes game-details {
+    0% {
+
+        translate: -400px 0px;
+       opacity: 0;
+    }
+
+
+
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+        opacity: 1;
+
+    }
+
+}

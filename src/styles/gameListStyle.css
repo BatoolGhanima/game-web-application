@@ -4,13 +4,14 @@
     width: 100%;
     background-repeat: repeat;
     background-size: cover;
-    margin: 0;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
     animation-name: games;
+    animation-duration: 3s;
 
 }
 
@@ -18,15 +19,16 @@
 @keyframes games {
     0% {
 
-        translate: 0 -400px;
-        rotate: 5deg;
+        translate: -400px 0px;
+       opacity: 0;
     }
 
 
 
     100% {
-        translate: -400px 0;
+        translate: 0 0;
         rotate: 0deg;
+        opacity: 1;
 
     }
 

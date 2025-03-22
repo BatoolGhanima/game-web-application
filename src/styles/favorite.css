@@ -1,0 +1,102 @@
+:root{
+    --box-shadow: 0 0 5px white, 0 0 5px white;
+    --gradeint-gray: rgba(255, 255, 255, 0.32);
+    --gradient-blue: rgba(0, 0, 255, 0.373);
+    --gradient-black: rgba(2, 0, 0, 0.617);
+    --text-white: white;
+    --gradient-purple: rgba(136, 0, 136, 0.764);
+    --link-shadow: 0 0 10px white;
+    --dark-blue: rgb(0, 16, 76);
+
+}
+
+.favorite-container {
+   
+    width: 80%;
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 150px auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gradient-purple);
+    border-radius: 15px;
+    box-shadow: 0 2px 3px var(--gradeint-gray);
+}
+
+.dark .favorite-container{
+    background: var(--gradient-blue);
+ 
+}
+
+.favorite-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.favorite-item {
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradeint-gray);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fav-title {
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.fav-title span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e53e3e;
+    padding: 0.3rem 0.8rem;
+    background: rgba(229, 62, 62, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .favorite-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .favorite-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fav-title {
+        margin: 1rem 0 0 0;
+    }
+}

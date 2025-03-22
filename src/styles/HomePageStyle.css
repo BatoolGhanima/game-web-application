@@ -2,21 +2,22 @@
 
     --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
     --gradeint-gray: rgba(255, 255, 255, 0.22);
-    /* dark mode */
     --gradient-blue: rgba(0, 0, 255, 0.373);
     --gradient-black: rgba(2, 0, 0, 0.617);
     --text-white: white;
 }
 
+/* home page  */
 .main-container {
     background-image: url(../assets/background.jpg);
     position: relative;
-background-size: cover;;
+    background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
 
 }
 
+/* create gradient bg up of main content */
 .second-container {
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@ background-size: cover;;
     z-index: 3;
 }
 
+/* titile button, images */
 .first-sectiont {
     width: 100%;
     padding: 0 50px;
@@ -51,10 +53,10 @@ background-size: cover;;
 
 }
 
+
 .swiper-container {
     width: 100%;
-    margin-top: 50px;
-    /* ✅ مسافة بعد القسم الأول */
+    margin-top: 50px; /* space after first section*/
     display: flex;
     justify-content: center;
     position: absolute;
@@ -77,6 +79,7 @@ background-size: cover;;
     animation-duration: 2s;
 }
 
+/* button style with shadow */
 .button {
     box-shadow: var(--box-shadow);
     border-radius: 25px;
@@ -95,6 +98,7 @@ background-size: cover;;
 }
 
 
+/* hover effect */
 .button:hover {
 
     transition: all;
@@ -104,6 +108,7 @@ background-size: cover;;
 
 }
 
+/* Animation */
 @keyframes leftContent {
     0% {
 
@@ -174,7 +179,7 @@ background-size: cover;;
 
 
 
-
+/* for diffrent screens */
 @media screen and (max-width: 1199px) {
     .first-sectiont {
         justify-content: space-around;
@@ -183,7 +188,7 @@ background-size: cover;;
     }
 
     .first-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /*reduce font size*/
     }
 
 
@@ -203,16 +208,15 @@ background-size: cover;;
 @media screen and (max-width: 768px) {
     .first-sectiont {
         flex-direction: column;
-        /* ✅ جعل العناصر في عمود بدلاً من صف */
+        /* change from row to column*/
         text-align: center;
-        /* ✅ توسيط النص */
         top: 9rem;
         padding: 0 20px;
     }
 
     .first-title {
         font-size: 1.5rem;
-        /* ✅ تصغير حجم العنوان */
+        /* ✅change size*/
     }
 
     .right-content {
@@ -225,7 +229,7 @@ background-size: cover;;
 
     .button {
         width: 200px;
-        /* ✅ تقليل حجم الزر */
+        /* reduce button*/
         font-size: 20px;
     }
 

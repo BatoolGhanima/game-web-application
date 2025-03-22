@@ -2,7 +2,6 @@
 
     --box-shadow: 0 0 5px white, 0 0 5px white;
     --gradeint-gray: rgba(255, 255, 255, 0.32);
-    /* dark mode */
     --gradient-blue: rgba(0, 0, 255, 0.373);
     --gradient-black: rgba(2, 0, 0, 0.617);
     --text-white: white;
@@ -10,6 +9,7 @@
     --link-shadow: 0 0 10px white;
 }
 
+/* continet nav */
 .navbar {
     background: linear-gradient(to right, var(--gradient-purple), var(--gradeint-gray));
     width: 100%;
@@ -52,6 +52,7 @@
 
 }
 
+/* style link and add effects */
 .links {
     display: flex;
     gap: 1rem;
@@ -70,6 +71,7 @@
 
 }
 
+/* create under score when hover  */
 .links::after {
     content: "";
     position: absolute;
@@ -87,6 +89,7 @@
 }
 
 
+/* navbar for mobile  */
 .mobile-menu {
     position: absolute;
     top: 0;
@@ -120,11 +123,10 @@
 .dark .mobile-menu {
 
     background: linear-gradient(to right, #1a1a2eb5, #16213e)
-        /* background: linear-gradient(to right, purple, rgb(0, 0, 188)); */
 }
 
 
-
+/* Animation */
 @keyframes mobile-menu {
     0% {
 
@@ -137,6 +139,7 @@
 
 }
 
+/* diffrent screens */
 @media screen and (max-width: 768px) {
     .container-links {
         display: none;

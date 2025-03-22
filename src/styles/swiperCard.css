@@ -2,13 +2,14 @@
 
     --box-shadow: 0 0 5px cyan, 0 0 5px cyan;
     --gradeint-gray: rgba(255, 255, 255, 0.22);
-    /* dark mode */
     --gradient-blue: rgba(0, 0, 255, 0.373);
     --gradient-black: rgba(2, 0, 0, 0.617);
     --dark-blue: rgb(0, 16, 76);
     --text-white: white;
 }
 
+
+/* style and design cards in swiper in home page */
 
 .container-card {
     background-color: var(--text-white);
@@ -27,7 +28,6 @@
     width: 100%;
     padding: 8px;
     height: 350px;
-    /* نفس h-60 */
     transition: all 0.3s ease;
 }
 

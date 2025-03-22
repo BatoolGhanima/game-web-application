@@ -7,6 +7,8 @@ import SideBar from "./components/SideBar";
 import Sides from "./components/sides";
 import ErrorPage from "./components/ErrorPage";
 import GameDetails from "./components/GameDetails";
+import Favorite from "./components/Favorite";
+
 const router = createBrowserRouter([
 
   {
@@ -37,6 +39,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>
        
       },
+      {
+        path: '/favorite',
+        element: <Favorite />,
+        errorElement: <ErrorPage />
+      }
+      
 
      
 

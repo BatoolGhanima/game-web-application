@@ -1,13 +1,19 @@
 import { useRef, useState } from "react";
-import store from '../state-managment/store'
+import useSearchTextStore from '../state-managment/searchStore'
 
 import '../styles/searchStyle.css'
 
-import { IoIosSearch } from "react-icons/io";
+// search component: return the result of search in games
 const SearchInput = () => {
-    const setSearchText = store((state) => state.setSearchText)
+
+    // to get the search text from the store
+    
+    const setSearchText = useSearchTextStore((state) => state.setSearchText)
+
+    // to get the search text from the form
     const ref = useRef(null);
-    const [isOpen, setIsOpen] = useState(false);
+   
+    
     return (
         <form
             className="w-full"
@@ -17,30 +23,7 @@ const SearchInput = () => {
             }}
         >
 
-            {/* search icon */}
-            {/* <span className="searchIcon">
-                <IoIosSearch  onClick={() => { setIsOpen(!isOpen) }} />
-            </span>
-             */}
-
-            {/* {isOpen && (
-
-                <div>
-                    <div className="relative">
-                        
-                        <input
-                            ref={ref}
-                            type="search"
-                            id="default-search"
-                            className="search-input"
-                            placeholder="Search ..."
-                            required
-                        />
-                    </div>
-                </div>
-
-            ) */}
-
+            
             <div>
                 <div className="relative">
 
