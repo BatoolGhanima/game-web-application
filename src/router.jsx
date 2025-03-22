@@ -33,12 +33,7 @@ const router = createBrowserRouter([
       errorElement: <ErrorPage></ErrorPage>
     
     },
-      {
-        path: '/sidebar',
-        element: <Sides></Sides>,
-        errorElement: <ErrorPage></ErrorPage>
-       
-      },
+    
       {
         path: '/favorite',
         element: <Favorite />,

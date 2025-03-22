@@ -39,7 +39,6 @@ const NavBar = () => {
                 <div className="container-links" >
                     <div className="links"> <Link to={'/'}> Home </Link> <span></span> </div>
                     <div className="links"> <Link to={'/mainContent'}>Games </Link> <span></span> </div>
-                    <div className="links"> <Link to={'/sidebar'}>About </Link> <span></span> </div>
                 </div>
 
 
