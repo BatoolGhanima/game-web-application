@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../../styles/SwiperCard.css"
+import "../../styles/swiperCard.css"
 
 // استيراد وحدات Swiper
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
