@@ -7,7 +7,7 @@ import useSortOrderStore from '../state-managment/sort0roderStore'
 import useSearchTextStore from '../state-managment/searchStore'
 import DataError from "./DataError";
 import '../styles/gameListStyle.css'
-import Loading from "./loading";
+import Loading from "./Loading";
 
 //show game list in the home page and when selece or search for  a game
 const GameList = () => {
