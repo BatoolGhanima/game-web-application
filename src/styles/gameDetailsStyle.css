@@ -265,7 +265,7 @@
     } 
     .details-container , .about , .screenshots-container {
         flex-direction: column;
-        width: 400px;
+        width: 350px;
         height: 800px;
         padding: 10px;
         font-size: 1rem;

@@ -17,6 +17,7 @@
     align-items: center;
     background: linear-gradient(to right, rgb(209, 209, 209), rgb(243, 206, 246));
     width: 100%;
+   
 }
 
 .dark .whole-favorite {
@@ -28,7 +29,6 @@
    
     width: 80%;
     max-width: 1200px;
-    min-height: 400px;
     margin: 150px auto;
     padding: 2rem;
     display: flex;
