@@ -20,7 +20,7 @@ const MainContent = () => {
                 {/* call the game heading component to show the selected genre and platform */}
                     <div className="">
                         <GameHeading selectGenre={selectGenre} selectPlatform={selectPlatform} />
-                        <div className="filter ">
+                        <div className="filter flex ">
                             {/* call platform and genre */}
                             <PlatformSelector />
                             <SortSelector />

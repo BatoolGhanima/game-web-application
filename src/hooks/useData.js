@@ -19,7 +19,7 @@ const useData = (endpoint, requestConfig, queryKeyOverride) => {
         return response.data.results;
       } catch (err) {
         if (err instanceof CanceledError) {
-          //Forcibly throwing an error to prevent "undefined" data from being returned
+          
           throw err;
         }
         throw err;

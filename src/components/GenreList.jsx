@@ -31,7 +31,7 @@ const GenreList = () => {
                 className="genre-switch lg:hidden"
                 onClick={() => setIsOpen(!isOpen)}>
                
-                <HiOutlineViewList />
+                <HiOutlineViewList/>
             </button>
 
             <div className="genre-container sm:hidden md:hidden lg:block ">

@@ -18,26 +18,35 @@
 /* main container */
 .whole-page {
     background-image: url(../assets/background.jpg);
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 110vh;
-    width: 100%;
-    background-repeat: repeat;
     
 
 }
 
+.whole-container{
+  top: 50%;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 /* details container , middle of screen */
 .details-container {
-   
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    color: var(--gradient-black);
-    transform: translateX(-50%);
+    
+  
     display: flex;
-    width: 900px;
+    width: 1000px;
     height: 500px;
+    margin-bottom: 2rem;
     background: linear-gradient(to right, var(--gradeint-gray), var(--gradient-purple));
     backdrop-filter: blur(10px);
     border-radius: 1rem;
@@ -46,7 +55,31 @@
 
 }
 
-.dark .details-container {
+.about{
+  
+    width: 1000px;
+    height: 500px;
+    padding: 30px;
+    background: linear-gradient(to right, var(--gradeint-gray), var(--gradient-purple));
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    animation-name: game-details;
+    animation-duration: 3s;  
+    overflow: auto;
+ }
+.about h2{
+    text-shadow: var(--link-shadow);
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+}
+
+.dark .details-container  {
+    background: linear-gradient(to right, var(--dark-blue), var(--gradient-blue)70%);
+
+}
+.dark .about {
     background: linear-gradient(to right, var(--dark-blue), var(--gradient-blue)70%);
 
 }
@@ -107,19 +140,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    color: var(--gradient-black);
     position: relative;
     height: 100%;
     width: 50%;
     padding-right: 20px;
+    text-shadow: 2px 2px 5px gray;
+
 }
 
 /* title */
 .right-details h1 {
     text-shadow: var(--link-shadow);
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
     font-size: 3rem;
 
@@ -127,7 +160,7 @@
 
 /* discraption */
 .right-details h2 span {
-    color: var(--gradient-black);
+    color: cyan;
     font-size: 1.2rem;
 
 }
@@ -135,21 +168,111 @@
 /* secondary title */
 .right-details h2 {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
     margin: 4px;
 }
 
 
+
+.screenshots-container {
+    width: 1000px;
+    height: 500px;
+    padding: 30px;
+    background: linear-gradient(to right, var(--gradeint-gray), var(--gradient-purple));
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    animation-name: game-details;
+    animation-duration: 3s;  
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 10px;
+}
+.screenshots-container h2{
+    text-shadow: var(--link-shadow);
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+}
+.dark .screenshots-container{
+    background: linear-gradient(to right, var(--dark-blue), var(--gradient-blue)70%);
+  
+}
+
+.screenshots-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.screenshot-img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
 /* for diffrent screen sizea */
+
+@media screen and (max-width: 1000px) {
+    .whole-container{
+        top: 50%;
+    }
+    .details-container , .about , .screenshots-container{
+        flex-direction: column;
+        width: 550px;
+        height: 800px;
+        padding: 10px;
+        font-size: 1rem;
+        
+    }
+
+    .left-details {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .under-tape {
+        display: none;
+    }
+
+    .right-details {
+        width: 100%;
+    }
+
+}
+
+
+
+
 @media screen and (max-width: 768px) {
-    .details-container {
+    .whole-container{
+        top: 50%;
+    } 
+    .details-container , .about , .screenshots-container {
         flex-direction: column;
         width: 400px;
         height: 800px;
-        padding: 0 10px;
+        padding: 10px;
         font-size: 1rem;
         top: 15%;
+    }
+
+    .screenshot-img{
+        width: 180px;
     }
 
     .left-details {
