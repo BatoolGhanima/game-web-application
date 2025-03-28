@@ -16,7 +16,9 @@ const Favorite = () => {
       <>
      
 
-       
+            <div className="whole-favorite">
+                
+      
             <div className="favorite-container">
                 <Link to={'/'}> <p>← back to home</p> </Link>
             <h1 >My Favorite Games</h1>
@@ -45,6 +47,7 @@ const Favorite = () => {
         </div>
 
 
+        </div>
         </> );
 };
 

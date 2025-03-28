@@ -32,7 +32,8 @@
 }
 
 .whole-container{
-  top: 50%;
+     top: 70%;
+     margin-top: 500px;
     color: var(--text-white);
     display: flex;
     flex-direction: column;
